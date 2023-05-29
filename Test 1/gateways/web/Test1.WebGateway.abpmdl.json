@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "Test1.WebGateway": {
+      "path": "src/Test1.WebGateway/Test1.WebGateway.abppkg.json",
+      "folder": "src"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+body {
+}
+.mCSB_inside > .mCSB_container {
+  margin-right: 14px;
+} 
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { 
+  background-color: var(--lpx-content-bg); 
+} 
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar { 
+  background-color: var(--lpx-primary); 
+} 
+.mCSB_scrollTools .mCSB_draggerRail {  
+  background-color: var(--lpx-card-bg);  
+}
+.mCSB_scrollTools { 
+  margin-right: -6px; 
+}
+.chat-box {
+  height: calc(100vh - 440px); 
+  overflow-y: auto;
+}
+.messages-box {
+  max-height: calc(100vh - 240px);  
+  overflow-y: auto;
+}
+@media screen and (max-width: 767px) {
+  .chat-box {
+    max-height: 360px;  
+  } 
+  .messages-box {
+    max-height: 240px;  
+  }
+}
+#lpx-toolbar .lpx-menu-item-link .lpx-icon {
+  margin-top: 20px;
+  font-size: 1.25em;
+}
+
+.pb-12 {
+    padding-bottom: 12.7rem !important;
+}
+
+.pt-12 {
+    padding-top: 12.7rem !important;
+}

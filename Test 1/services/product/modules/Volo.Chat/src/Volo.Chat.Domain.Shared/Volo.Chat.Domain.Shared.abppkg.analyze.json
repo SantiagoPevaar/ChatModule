@@ -1,0 +1,35 @@
+{
+  "name": "Volo.Chat.Domain.Shared",
+  "hash": "b525cb6d6ab9bd5ee4b8bfc3df251d0f",
+  "contents": [
+    {
+      "namespace": "Volo.Chat",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "Volo.Abp.Validation",
+          "namespace": "Volo.Abp.Validation",
+          "name": "AbpValidationModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.Features",
+          "namespace": "Volo.Abp.Features",
+          "name": "AbpFeaturesModule"
+        }
+      ],
+      "contentType": "abpModule",
+      "name": "ChatDomainSharedModule",
+      "summary": null
+    },
+    {
+      "valueType": "ToggleStringValueType",
+      "defaultValue": "False",
+      "displayName": "Enable chat",
+      "description": "Enable messaging system in application.",
+      "isAvailableToHost": true,
+      "isVisibleToClients": true,
+      "contentType": "feature",
+      "name": "Chat.Enable",
+      "summary": null
+    }
+  ]
+}

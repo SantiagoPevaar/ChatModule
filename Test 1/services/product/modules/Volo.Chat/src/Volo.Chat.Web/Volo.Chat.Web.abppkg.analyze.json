@@ -1,0 +1,29 @@
+{
+  "name": "Volo.Chat.Web",
+  "hash": "014abf80f19363cb9995a5a14e8a575e",
+  "contents": [
+    {
+      "namespace": "Volo.Chat.Web",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "Volo.Chat.Application.Contracts",
+          "namespace": "Volo.Chat",
+          "name": "ChatApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared",
+          "namespace": "Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared",
+          "name": "AbpAspNetCoreMvcUiThemeSharedModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.AutoMapper",
+          "namespace": "Volo.Abp.AutoMapper",
+          "name": "AbpAutoMapperModule"
+        }
+      ],
+      "contentType": "abpModule",
+      "name": "ChatWebModule",
+      "summary": null
+    }
+  ]
+}

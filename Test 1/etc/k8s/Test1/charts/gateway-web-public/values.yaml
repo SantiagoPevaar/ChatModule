@@ -1,0 +1,42 @@
+config:
+  selfUrl: # https://test1-st-gateway-public-web
+  globalConfigurationBaseUrl: # http://test1-st-gateway-public-web
+  corsOrigins: # https://test1-st-gateway-web,https://test1-st-gateway-public-web
+  authServer:
+    authority: # http://test1-st-authserver
+    requireHttpsMetadata: # "false"
+    swaggerClientId: # WebGateway_Swagger
+  dotnetEnv: Staging 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+
+reRoutes:
+  accountService:
+    schema: http
+    host: test1-st-authserver
+    port: 80
+  saasService:
+    schema: http
+    host: test1-st-saas
+    port: 80
+  administrationService:
+    schema: http
+    host: test1-st-administration
+    port: 80
+  productService:
+    schema: http
+    host: test1-st-product
+    port: 80  
+
+ingress:
+  host: test1-st-gateway-web-public
+  tlsSecret: test1-tls
+
+image:
+  repository: mycompanyname/test1-gateway-web-public
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}
+    

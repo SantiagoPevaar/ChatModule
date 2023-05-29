@@ -1,0 +1,62 @@
+{
+  "name": "Volo.Chat.EntityFrameworkCore",
+  "hash": "220a47303de0b5be5f8a2c0ffca6001b",
+  "contents": [
+    {
+      "namespace": "Volo.Chat.EntityFrameworkCore",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "Volo.Chat.Domain",
+          "namespace": "Volo.Chat",
+          "name": "ChatDomainModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.Users.EntityFrameworkCore",
+          "namespace": "Volo.Abp.Users.EntityFrameworkCore",
+          "name": "AbpUsersEntityFrameworkCoreModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.EntityFrameworkCore",
+          "namespace": "Volo.Abp.EntityFrameworkCore",
+          "name": "AbpEntityFrameworkCoreModule"
+        }
+      ],
+      "contentType": "abpModule",
+      "name": "ChatEntityFrameworkCoreModule",
+      "summary": null
+    },
+    {
+      "namespace": "Volo.Chat.EntityFrameworkCore",
+      "connectionStringName": "Chat",
+      "databaseTables": [
+        {
+          "entityFullName": "Volo.Chat.Conversations.Conversation",
+          "contentType": "databaseTable",
+          "name": "ChatConversations",
+          "summary": null
+        },
+        {
+          "entityFullName": "Volo.Chat.Messages.Message",
+          "contentType": "databaseTable",
+          "name": "ChatMessages",
+          "summary": null
+        },
+        {
+          "entityFullName": "Volo.Chat.Messages.UserMessage",
+          "contentType": "databaseTable",
+          "name": "ChatUserMessages",
+          "summary": null
+        },
+        {
+          "entityFullName": "Volo.Chat.Users.ChatUser",
+          "contentType": "databaseTable",
+          "name": "ChatUsers",
+          "summary": null
+        }
+      ],
+      "contentType": "efCoreDbContext",
+      "name": "ChatDbContext",
+      "summary": null
+    }
+  ]
+}

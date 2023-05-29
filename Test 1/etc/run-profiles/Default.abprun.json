@@ -1,0 +1,54 @@
+{
+  "applications": {
+    "Docker-Dependencies": {
+      "type": "cli",
+      "workingDirectory": "../docker",
+      "startCommand": "./up.ps1",
+      "stopCommand": "./down.ps1"
+    },
+    "Test1.AuthServer": {
+      "type": "dotnet-project",
+      "path": "../../apps/auth-server/src/Test1.AuthServer/Test1.AuthServer.csproj"
+    },
+    "Test1.Blazor": {
+      "type": "dotnet-project",
+      "path": "../../apps/blazor/src/Test1.Blazor/Test1.Blazor.csproj"
+    },
+    "Test1.Blazor.Server": {
+      "type": "dotnet-project",
+      "path": "../../apps/blazor/src/Test1.Blazor.Server/Test1.Blazor.Server.csproj"
+    },
+    "Test1.PublicWeb": {
+      "type": "dotnet-project",
+      "path": "../../apps/public-web/src/Test1.PublicWeb/Test1.PublicWeb.csproj"
+    },
+    "Test1.Web": {
+      "type": "dotnet-project",
+      "path": "../../apps/web/src/Test1.Web/Test1.Web.csproj"
+    },
+    "Test1.AdministrationService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/administration/src/Test1.AdministrationService.HttpApi.Host/Test1.AdministrationService.HttpApi.Host.csproj"
+    },
+    "Test1.IdentityService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/identity/src/Test1.IdentityService.HttpApi.Host/Test1.IdentityService.HttpApi.Host.csproj"
+    },
+    "Test1.ProductService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/product/src/Test1.ProductService.HttpApi.Host/Test1.ProductService.HttpApi.Host.csproj"
+    },
+    "Test1.SaasService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/saas/src/Test1.SaasService.HttpApi.Host/Test1.SaasService.HttpApi.Host.csproj"
+    },
+    "Test1.WebGateway": {
+      "type": "dotnet-project",
+      "path": "../../gateways/web/src/Test1.WebGateway/Test1.WebGateway.csproj"
+    },
+    "Test1.PublicWebGateway": {
+      "type": "dotnet-project",
+      "path": "../../gateways/web-public/src/Test1.PublicWebGateway/Test1.PublicWebGateway.csproj"
+    }
+  }
+}

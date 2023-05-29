@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Test1.AdministrationService.HttpApi": {
+      "path": "src/Test1.AdministrationService.HttpApi/Test1.AdministrationService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.Application.Contracts": {
+      "path": "src/Test1.AdministrationService.Application.Contracts/Test1.AdministrationService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.Application": {
+      "path": "src/Test1.AdministrationService.Application/Test1.AdministrationService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.Domain.Shared": {
+      "path": "src/Test1.AdministrationService.Domain.Shared/Test1.AdministrationService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.Domain": {
+      "path": "src/Test1.AdministrationService.Domain/Test1.AdministrationService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.EntityFrameworkCore": {
+      "path": "src/Test1.AdministrationService.EntityFrameworkCore/Test1.AdministrationService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.HttpApi.Client": {
+      "path": "src/Test1.AdministrationService.HttpApi.Client/Test1.AdministrationService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.HttpApi.Host": {
+      "path": "src/Test1.AdministrationService.HttpApi.Host/Test1.AdministrationService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "Test1.AdministrationService.TestBase": {
+      "path": "test/Test1.AdministrationService.TestBase/Test1.AdministrationService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "Test1.AdministrationService.Domain.Tests": {
+      "path": "test/Test1.AdministrationService.Domain.Tests/Test1.AdministrationService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test1.AdministrationService.EntityFrameworkCore.Tests": {
+      "path": "test/Test1.AdministrationService.EntityFrameworkCore.Tests/Test1.AdministrationService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test1.AdministrationService.Application.Tests": {
+      "path": "test/Test1.AdministrationService.Application.Tests/Test1.AdministrationService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

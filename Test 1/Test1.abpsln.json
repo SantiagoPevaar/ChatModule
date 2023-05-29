@@ -1,0 +1,59 @@
+{
+  "folders": {
+    "items": {
+      "apps": {},
+      "gateways": {},
+      "services": {}
+    }
+  },
+  "modules": {
+    "Test1": {
+      "path": "Test1.abpmdl.json"
+    },
+    "Test1.AuthServer": {
+      "path": "apps/auth-server/Test1.AuthServer.abpmdl.json",
+      "folder": "apps"
+    },
+    "Test1.Blazor": {
+      "path": "apps/blazor/Test1.Blazor.abpmdl.json",
+      "folder": "apps"
+    },
+    "Test1.PublicWeb": {
+      "path": "apps/public-web/Test1.PublicWeb.abpmdl.json",
+      "folder": "apps"
+    },
+    "Test1.Web": {
+      "path": "apps/web/Test1.Web.abpmdl.json",
+      "folder": "apps"
+    },
+    "Test1.WebGateway": {
+      "path": "gateways/web/Test1.WebGateway.abpmdl.json",
+      "folder": "gateways"
+    },
+    "Test1.PublicWebGateway": {
+      "path": "gateways/web-public/Test1.PublicWebGateway.abpmdl.json",
+      "folder": "gateways"
+    },
+    "Test1.AdministrationService": {
+      "path": "services/administration/Test1.AdministrationService.abpmdl.json",
+      "folder": "services"
+    },
+    "Test1.IdentityService": {
+      "path": "services/identity/Test1.IdentityService.abpmdl.json",
+      "folder": "services"
+    },
+    "Test1.ProductService": {
+      "path": "services/product/Test1.ProductService.abpmdl.json",
+      "folder": "services"
+    },
+    "Test1.SaasService": {
+      "path": "services/saas/Test1.SaasService.abpmdl.json",
+      "folder": "services"
+    }
+  },
+  "runProfiles": {
+    "Default": {
+      "path": "etc/run-profiles/Default.abprun.json"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+helm upgrade --install test1-st test1 --namespace test1 --create-namespace
