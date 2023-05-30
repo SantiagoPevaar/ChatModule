@@ -23,12 +23,14 @@ import { APP_ROUTE_PROVIDER } from './route.provider';
 import { FeatureManagementModule } from '@abp/ng.feature-management';
 import { AbpOAuthModule } from '@abp/ng.oauth';
 import { ProductServiceConfigModule } from 'product-service/config';
+import { ChatConfigModule } from '@volo/abp.ng.chat/config';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ChatConfigModule.forRoot(),
     AppRoutingModule,
     CoreModule.forRoot({
       environment,

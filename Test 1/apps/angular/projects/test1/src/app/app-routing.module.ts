@@ -51,6 +51,11 @@ const routes: Routes = [
     path: 'product-service',
     loadChildren: () => import('product-service').then(m => m.ProductServiceModule),
   },
+  {
+    path: 'chat',
+    loadChildren: () =>
+      import('@volo/abp.ng.chat').then(m => m.ChatModule.forLazy(/* options here */)),
+  },
 ];
 
 @NgModule({
