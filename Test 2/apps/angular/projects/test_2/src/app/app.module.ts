@@ -30,6 +30,7 @@ import { ChatConfigModule } from '@volo/abp.ng.chat/config';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ChatConfigModule.forRoot(),
     AppRoutingModule,
     CoreModule.forRoot({
       environment,
