@@ -9,6 +9,8 @@ using Volo.Abp.AutoMapper;
 using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Chat;
+using Volo.Chat.Web;
 
 namespace Test_2.ProductService.Web;
 
@@ -17,7 +19,9 @@ namespace Test_2.ProductService.Web;
     typeof(AbpAspNetCoreMvcUiThemeSharedModule),
     typeof(AbpAutoMapperModule)
     )]
-public class ProductServiceWebModule : AbpModule
+[DependsOn(typeof(ChatSignalRModule))]
+    [DependsOn(typeof(ChatWebModule))]
+    public class ProductServiceWebModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

@@ -1,0 +1,24 @@
+{
+  "name": "Volo.Chat.HttpApi.Client",
+  "hash": "9e28ff095f512415f3d08bb63eeed3db",
+  "contents": [
+    {
+      "namespace": "Volo.Chat",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "Volo.Chat.Application.Contracts",
+          "namespace": "Volo.Chat",
+          "name": "ChatApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.Http.Client",
+          "namespace": "Volo.Abp.Http.Client",
+          "name": "AbpHttpClientModule"
+        }
+      ],
+      "contentType": "abpModule",
+      "name": "ChatHttpApiClientModule",
+      "summary": null
+    }
+  ]
+}

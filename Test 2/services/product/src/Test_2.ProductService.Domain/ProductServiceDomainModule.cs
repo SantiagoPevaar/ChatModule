@@ -1,5 +1,6 @@
-﻿using Volo.Abp.Domain;
+using Volo.Abp.Domain;
 using Volo.Abp.Modularity;
+using Volo.Chat;
 
 namespace Test_2.ProductService;
 
@@ -7,7 +8,8 @@ namespace Test_2.ProductService;
     typeof(AbpDddDomainModule),
     typeof(ProductServiceDomainSharedModule)
 )]
-public class ProductServiceDomainModule : AbpModule
+[DependsOn(typeof(ChatDomainModule))]
+    public class ProductServiceDomainModule : AbpModule
 {
 
 }

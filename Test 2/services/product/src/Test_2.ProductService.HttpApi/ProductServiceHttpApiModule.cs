@@ -1,16 +1,18 @@
-﻿using Localization.Resources.AbpUi;
+using Localization.Resources.AbpUi;
 using Microsoft.Extensions.DependencyInjection;
 using Test_2.ProductService.Localization;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
+using Volo.Chat;
 
 namespace Test_2.ProductService;
 
 [DependsOn(
     typeof(ProductServiceApplicationContractsModule),
     typeof(AbpAspNetCoreMvcModule))]
-public class ProductServiceHttpApiModule : AbpModule
+[DependsOn(typeof(ChatHttpApiModule))]
+    public class ProductServiceHttpApiModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

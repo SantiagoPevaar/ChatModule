@@ -1,6 +1,7 @@
-﻿using Volo.Abp.Application;
+using Volo.Abp.Application;
 using Volo.Abp.Authorization;
 using Volo.Abp.Modularity;
+using Volo.Chat;
 
 namespace Test_2.ProductService;
 
@@ -9,7 +10,8 @@ namespace Test_2.ProductService;
     typeof(AbpDddApplicationContractsModule),
     typeof(AbpAuthorizationModule)
     )]
-public class ProductServiceApplicationContractsModule : AbpModule
+[DependsOn(typeof(ChatApplicationContractsModule))]
+    public class ProductServiceApplicationContractsModule : AbpModule
 {
 
 }

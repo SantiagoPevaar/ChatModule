@@ -3,6 +3,7 @@ using Test_2.ProductService.Products;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Modularity;
+using Volo.Chat.EntityFrameworkCore;
 
 namespace Test_2.ProductService.EntityFrameworkCore;
 
@@ -11,7 +12,8 @@ namespace Test_2.ProductService.EntityFrameworkCore;
     typeof(AbpEntityFrameworkCoreModule),
     typeof(ProductServiceDomainModule)
 )]
-public class ProductServiceEntityFrameworkCoreModule : AbpModule
+[DependsOn(typeof(ChatEntityFrameworkCoreModule))]
+    public class ProductServiceEntityFrameworkCoreModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
@@ -26,6 +28,7 @@ public class ProductServiceEntityFrameworkCoreModule : AbpModule
              * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
             options.AddRepository<Product, EfCoreProductRepository>();
+            options.ReplaceDbContext<IChatDbContext>();
         });
 
         Configure<AbpDbContextOptions>(options =>

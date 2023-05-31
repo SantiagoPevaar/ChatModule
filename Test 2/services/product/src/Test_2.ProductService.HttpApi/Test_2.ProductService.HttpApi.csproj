@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="7.2.2" />
+    <ProjectReference Include="..\..\modules\Volo.Chat\src\Volo.Chat.HttpApi\Volo.Chat.HttpApi.csproj" />
     <ProjectReference Include="..\Test_2.ProductService.Application.Contracts\Test_2.ProductService.Application.Contracts.csproj" />
   </ItemGroup>
 
