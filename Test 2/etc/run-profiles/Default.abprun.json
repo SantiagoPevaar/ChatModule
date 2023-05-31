@@ -1,0 +1,54 @@
+{
+  "applications": {
+    "Docker-Dependencies": {
+      "type": "cli",
+      "workingDirectory": "../docker",
+      "startCommand": "./up.ps1",
+      "stopCommand": "./down.ps1"
+    },
+    "Test_2.AuthServer": {
+      "type": "dotnet-project",
+      "path": "../../apps/auth-server/src/Test_2.AuthServer/Test_2.AuthServer.csproj"
+    },
+    "Test_2.Blazor": {
+      "type": "dotnet-project",
+      "path": "../../apps/blazor/src/Test_2.Blazor/Test_2.Blazor.csproj"
+    },
+    "Test_2.Blazor.Server": {
+      "type": "dotnet-project",
+      "path": "../../apps/blazor/src/Test_2.Blazor.Server/Test_2.Blazor.Server.csproj"
+    },
+    "Test_2.PublicWeb": {
+      "type": "dotnet-project",
+      "path": "../../apps/public-web/src/Test_2.PublicWeb/Test_2.PublicWeb.csproj"
+    },
+    "Test_2.Web": {
+      "type": "dotnet-project",
+      "path": "../../apps/web/src/Test_2.Web/Test_2.Web.csproj"
+    },
+    "Test_2.AdministrationService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/administration/src/Test_2.AdministrationService.HttpApi.Host/Test_2.AdministrationService.HttpApi.Host.csproj"
+    },
+    "Test_2.IdentityService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/identity/src/Test_2.IdentityService.HttpApi.Host/Test_2.IdentityService.HttpApi.Host.csproj"
+    },
+    "Test_2.ProductService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/product/src/Test_2.ProductService.HttpApi.Host/Test_2.ProductService.HttpApi.Host.csproj"
+    },
+    "Test_2.SaasService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/saas/src/Test_2.SaasService.HttpApi.Host/Test_2.SaasService.HttpApi.Host.csproj"
+    },
+    "Test_2.WebGateway": {
+      "type": "dotnet-project",
+      "path": "../../gateways/web/src/Test_2.WebGateway/Test_2.WebGateway.csproj"
+    },
+    "Test_2.PublicWebGateway": {
+      "type": "dotnet-project",
+      "path": "../../gateways/web-public/src/Test_2.PublicWebGateway/Test_2.PublicWebGateway.csproj"
+    }
+  }
+}

@@ -14,6 +14,7 @@ using Test1.Shared.Hosting.Microservices;
 using Prometheus;
 using Volo.Abp;
 using Volo.Abp.Modularity;
+using Volo.Chat;
 
 namespace Test1.ProductService;
 
@@ -21,8 +22,10 @@ namespace Test1.ProductService;
     typeof(Test1SharedHostingMicroservicesModule),
     typeof(ProductServiceApplicationModule),
     typeof(ProductServiceHttpApiModule),
-    typeof(ProductServiceEntityFrameworkCoreModule)
+    typeof(ProductServiceEntityFrameworkCoreModule),
+    typeof(ChatSignalRModule)
 )]
+
 public class ProductServiceHttpApiHostModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
@@ -93,19 +96,6 @@ public class ProductServiceHttpApiHostModule : AbpModule
         app.UseAuditing();
         app.UseUnitOfWork();
         app.UseConfiguredEndpoints(endpoints => endpoints.MapMetrics());
-        app.Use(async (httpContext, next) =>
-        {
-            var accessToken = httpContext.Request.Query["access_token"];
-
-            var path = httpContext.Request.Path;
-            if (!string.IsNullOrEmpty(accessToken) &&
-                (path.StartsWithSegments("/signalr-hubs/chat")))
-            {
-                httpContext.Request.Headers["Authorization"] = "Bearer " + accessToken;
-            }
-
-            await next();
-        });
     }
 
     public async override Task OnPostApplicationInitializationAsync(ApplicationInitializationContext context)

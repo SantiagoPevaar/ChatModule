@@ -1,0 +1,24 @@
+config:
+  selfUrl: # 
+  gatewayUrl: # 
+  authServer:
+    authority: # http://test_2-st-authserver
+    requireHttpsMetadata: # "false"
+    isOnK8s: # "true"
+    metaAddress: # http://test_2-st-authserver
+  dotnetEnv: # 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+ingress:
+  host: # test_2-st-blazor-server
+  tlsSecret: test_2-tls
+
+image:
+  repository: mycompanyname/test_2-app-blazor-server
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}   

@@ -32,5 +32,9 @@ export const environment = {
       url: 'https://localhost:44325',
       rootNamespace: 'Test1.ProductService',
     },
+    Chat: {
+      url: 'https://localhost:44325',
+      signalRUrl: 'https://localhost:44325',
+    },
   },
 } as Environment;

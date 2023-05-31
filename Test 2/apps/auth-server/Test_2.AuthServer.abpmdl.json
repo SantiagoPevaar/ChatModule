@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "Test_2.AuthServer": {
+      "path": "src/Test_2.AuthServer/Test_2.AuthServer.abppkg.json",
+      "folder": "src"
+    }
+  }
+}

@@ -93,7 +93,6 @@ namespace Test1.ProductService.Migrations
             modelBuilder.Entity("Volo.Chat.Conversations.Conversation", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("LastMessage")
@@ -135,7 +134,6 @@ namespace Test1.ProductService.Migrations
             modelBuilder.Entity("Volo.Chat.Messages.Message", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -182,7 +180,6 @@ namespace Test1.ProductService.Migrations
             modelBuilder.Entity("Volo.Chat.Messages.UserMessage", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("ChatMessageId")
@@ -227,7 +224,6 @@ namespace Test1.ProductService.Migrations
             modelBuilder.Entity("Volo.Chat.Users.ChatUser", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ConcurrencyStamp")

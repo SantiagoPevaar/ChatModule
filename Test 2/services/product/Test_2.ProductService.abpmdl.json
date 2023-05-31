@@ -1,0 +1,62 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Test_2.ProductService.Domain.Shared": {
+      "path": "src/Test_2.ProductService.Domain.Shared/Test_2.ProductService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.Domain": {
+      "path": "src/Test_2.ProductService.Domain/Test_2.ProductService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.Application.Contracts": {
+      "path": "src/Test_2.ProductService.Application.Contracts/Test_2.ProductService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.Application": {
+      "path": "src/Test_2.ProductService.Application/Test_2.ProductService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.EntityFrameworkCore": {
+      "path": "src/Test_2.ProductService.EntityFrameworkCore/Test_2.ProductService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.HttpApi": {
+      "path": "src/Test_2.ProductService.HttpApi/Test_2.ProductService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.HttpApi.Client": {
+      "path": "src/Test_2.ProductService.HttpApi.Client/Test_2.ProductService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.HttpApi.Host": {
+      "path": "src/Test_2.ProductService.HttpApi.Host/Test_2.ProductService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.Web": {
+      "path": "src/Test_2.ProductService.Web/Test_2.ProductService.Web.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.ProductService.Application.Tests": {
+      "path": "test/Test_2.ProductService.Application.Tests/Test_2.ProductService.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test_2.ProductService.Domain.Tests": {
+      "path": "test/Test_2.ProductService.Domain.Tests/Test_2.ProductService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test_2.ProductService.EntityFrameworkCore.Tests": {
+      "path": "test/Test_2.ProductService.EntityFrameworkCore.Tests/Test_2.ProductService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test_2.ProductService.TestBase": {
+      "path": "test/Test_2.ProductService.TestBase/Test_2.ProductService.TestBase.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

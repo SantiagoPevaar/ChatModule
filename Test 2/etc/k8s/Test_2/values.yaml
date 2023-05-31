@@ -1,0 +1,377 @@
+# auth-server sub-chart override
+authserver:
+  config:
+    selfUrl: https://test_2-st-authserver
+    corsOrigins: http://test_2-st-angular,https://test_2-st-angular,https://test_2-st-gateway-web,https://test_2-st-gateway-web-public,https://test_2-st-identity,https://test_2-st-administration,https://test_2-st-saas,https://test_2-st-product
+    allowedRedirectUrls: http://test_2-st-angular,https://test_2-st-angular,http://test_2-st-blazor,https://test_2-st-blazor
+    disablePii: "false"
+    identityService:
+      connString: "Server=test_2-st-sqldb,1433;Database=Test_2_Identity;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+    administrationService:
+      connString: "Server=test_2-st-sqldb,1433;Database=Test_2_Administration;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+    saasService:
+      connString: "Server=test_2-st-sqldb,1433;Database=Test_2_Saas;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+    authServer:
+      authority: http://test_2-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  ingress:
+    host: test_2-st-authserver
+  image:
+    repository: mycompanyname/test_2-app-authserver
+    tag: latest
+
+# identity-service sub-chart override
+identity:
+  config:
+    selfUrl: https://test_2-st-identity
+    corsOrigins: https://test_2-st-gateway-web
+    connectionStrings:
+      identityService: "Server=test_2-st-sqldb,1433;Database=Test_2_Identity;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      administrationService: "Server=test_2-st-sqldb,1433;Database=Test_2_Administration;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      saasService: "Server=test_2-st-sqldb,1433;Database=Test_2_Saas;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+    authServer:
+      authority: http://test_2-st-authserver
+      requireHttpsMetadata: "false"
+    dotnetEnv: Staging
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  openIdDict: #Seed applications and resources
+    applications:
+      authServerRootUrl: https://test_2-st-authserver/
+      angularRootUrl: https://test_2-st-angular/
+      webRootUrl: https://test_2-st-web/
+      blazorRootUrl: https://test_2-st-blazor/
+      blazorServerRootUrl: https://test_2-st-blazor-server/
+      publicWebRootUrl: https://test_2-st-public-web/
+      webGatewayRootUrl: https://test_2-st-gateway-web/
+      publicWebGatewayRootUrl: https://test_2-st-gateway-web-public/ 
+    resources:  
+      accountServiceRootUrl: https://test_2-st-authserver/
+      administrationServiceRootUrl: https://test_2-st-administration/
+      identityServiceRootUrl: https://test_2-st-identity/
+      saasServiceRootUrl: https://test_2-st-saas/
+      productServiceRootUrl: https://test_2-st-product/
+  ingress:
+    host: test_2-st-identity
+  image:
+    repository: mycompanyname/test_2-service-identity
+    tag: latest
+
+# administration-service sub-chart override
+administration:
+  config:
+    selfUrl: https://test_2-st-administration
+    corsOrigins: https://test_2-st-gateway-web,https://test_2-st-gateway-web-public
+    connectionStrings:
+      administrationService: "Server=test_2-st-sqldb,1433;Database=Test_2_Administration;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      saasService: "Server=test_2-st-sqldb,1433;Database=Test_2_Saas;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"    
+    authServer:
+      authority: http://test_2-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    remoteServices:
+      abpIdentityBaseUrl: https://test_2-st-identity
+      useCurrentToken: "false"   
+    dotnetEnv: Staging
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  synchedCommunication: # Used for server-to-server (client-credentials) communication with identityService for user permissions
+    authority: https://test_2-st-authserver
+    requireHttps: "false"
+    validateIssuerName: "false"
+    validateEndpoints: "false"
+  ingress:
+    host: test_2-st-administration
+  image:
+    repository: mycompanyname/test_2-service-administration
+    tag: latest
+
+# saas-service sub-chart override
+saas:
+  config:
+    selfUrl: https://test_2-st-saas
+    corsOrigins: https://test_2-st-gateway-web
+    connectionStrings:
+      administrationService: "Server=test_2-st-sqldb,1433;Database=Test_2_Administration;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      saasService: "Server=test_2-st-sqldb,1433;Database=Test_2_Saas;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+    authServer:
+      authority: http://test_2-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  ingress:
+    host: test_2-st-saas
+  image:
+    repository: mycompanyname/test_2-service-saas
+    tag: latest  
+
+# product-service sub-chart override
+product:
+  config:
+    selfUrl: https://test_2-st-product
+    corsOrigins: https://test_2-st-gateway-web,https://test_2-st-gateway-web-public
+    connectionStrings:
+      productService: "Server=test_2-st-sqldb,1433;Database=Test_2_ProductService;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      administrationService: "Server=test_2-st-sqldb,1433;Database=Test_2_Administration;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      saasService: "Server=test_2-st-sqldb,1433;Database=Test_2_Saas;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+    authServer:
+      authority: http://test_2-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  ingress:
+    host: test_2-st-product
+  image:
+    repository: mycompanyname/test_2-service-product
+    tag: latest
+
+# gateway-web sub-chart override
+gateway-web:
+  config:
+    selfUrl: https://test_2-st-gateway-web
+    corsOrigins: https://test_2-st-angular,https://test_2-st-blazor
+    globalConfigurationBaseUrl: http://test_2-st-gateway-web
+    authServer:
+      authority: http://test_2-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  reRoutes:
+    accountService:
+      schema: http
+      host: test_2-st-authserver
+      port: 80
+    identityService:
+      schema: http
+      host: test_2-st-identity
+      port: 80
+    administrationService:
+      schema: http
+      host: test_2-st-administration
+      port: 80
+    saasService:
+      schema: http
+      host: test_2-st-saas
+      port: 80
+    productService:
+      schema: http
+      host: test_2-st-product
+      port: 80  
+  ingress:
+    host: test_2-st-gateway-web
+  image:
+    repository: mycompanyname/test_2-gateway-web
+    tag: latest
+    pullPolicy: IfNotPresent
+
+# gateway-web-public sub-chart override
+gateway-web-public:
+  config:
+    selfUrl: https://test_2-st-gateway-web-public
+    globalConfigurationBaseUrl: http://test_2-st-gateway-web-public
+    authServer:
+      authority: http://test_2-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+      swaggerClientSecret: "1q2w3e*"
+    dotnetEnv: Staging 
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  reRoutes:
+    accountService:
+      schema: http
+      host: test_2-st-authserver
+      port: 80
+    saasService:
+      schema: http
+      host: test_2-st-saas
+      port: 80
+    administrationService:
+      schema: http
+      host: test_2-st-administration
+      port: 80
+    productService:
+      schema: http
+      host: test_2-st-product
+      port: 80  
+  ingress:
+    host: test_2-st-gateway-web-public
+    tlsSecret: test_2-tls
+  image:
+    repository: mycompanyname/test_2-gateway-web-public
+    tag: latest
+    pullPolicy: IfNotPresent
+
+kibana:
+  config:
+    elasticsearchUrl: http://test_2-st-elasticsearch:9200
+
+# dbmigrator sub-chart override
+dbmigrator:
+  config:
+    connectionStrings:
+      identityService: "Server=test_2-st-sqldb,1433;Database=Test_2_Identity;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      administrationService: "Server=test_2-st-sqldb,1433;Database=Test_2_Administration;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      saasService: "Server=test_2-st-sqldb,1433;Database=Test_2_Saas;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+      productService: "Server=test_2-st-sqldb,1433;Database=Test_2_ProductService;User Id=sa;password=myPassw@rd;TrustServerCertificate=True"
+    dotnetEnv: Staging
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  openIdDict:
+    applications:
+      authServerRootUrl: https://test_2-st-authserver/
+      angularRootUrl: https://test_2-st-angular/
+      webRootUrl: https://test_2-st-web/
+      blazorRootUrl: https://test_2-st-blazor/
+      blazorServerRootUrl: https://test_2-st-blazor-server/
+      publicWebRootUrl: https://test_2-st-public-web/
+      webGatewayRootUrl: https://test_2-st-gateway-web/
+      publicWebGatewayRootUrl: https://test_2-st-gateway-web-public/ 
+    resources:  
+      accountServiceRootUrl: https://test_2-st-authserver/
+      administrationServiceRootUrl: https://test_2-st-administration/
+      identityServiceRootUrl: https://test_2-st-identity/
+      saasServiceRootUrl: https://test_2-st-saas/
+      productServiceRootUrl: https://test_2-st-product/
+  image:
+    repository: mycompanyname/test_2-db-migrator
+    tag: latest
+    pullPolicy: IfNotPresent  
+
+# Public Web application sub-chart override
+publicweb:
+  config:
+    selfUrl: https://test_2-st-public-web
+    gatewayUrl: http://test_2-st-gateway-web-public
+    authServer:
+      authority: http://test_2-st-authserver # should be domain on production (https://auth.mydomain.com)
+      requireHttpsMetadata: "false"
+      isOnK8s: "true"
+      metaAddress: http://test_2-st-authserver # should be container on production (http://test_2-az-authserver)
+    dotnetEnv: Staging 
+    redisHost: test_2-st-redis
+    rabbitmqHost: test_2-st-rabbitmq
+    elasticsearchUrl: http://test_2-st-elasticsearch
+  ingress:
+    host: test_2-st-public-web
+    tlsSecret: test_2-tls
+  image:
+    repository: mycompanyname/test_2-app-public-web
+    tag: latest
+    pullPolicy: IfNotPresent
+# Angular back-office application sub-chart override
+angular:
+  config:
+    selfUrl: https://test_2-st-angular
+    gatewayUrl: https://test_2-st-gateway-web
+    authServer:
+      authority: https://test_2-st-authserver
+      requireHttpsMetadata: "false"
+      responseType: "code"
+      strictDiscoveryDocumentValidation: false
+      skipIssuerCheck: true
+  ingress:
+    host: test_2-st-angular
+    tlsSecret: test_2-tls
+  image:
+    repository: mycompanyname/test_2-app-angular
+    tag: latest
+    pullPolicy: IfNotPresent
+# Default values for Test_2.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

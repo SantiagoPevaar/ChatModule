@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Test_2.IdentityService.HttpApi": {
+      "path": "src/Test_2.IdentityService.HttpApi/Test_2.IdentityService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.Application": {
+      "path": "src/Test_2.IdentityService.Application/Test_2.IdentityService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.Domain": {
+      "path": "src/Test_2.IdentityService.Domain/Test_2.IdentityService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.Domain.Shared": {
+      "path": "src/Test_2.IdentityService.Domain.Shared/Test_2.IdentityService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.EntityFrameworkCore": {
+      "path": "src/Test_2.IdentityService.EntityFrameworkCore/Test_2.IdentityService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.HttpApi.Client": {
+      "path": "src/Test_2.IdentityService.HttpApi.Client/Test_2.IdentityService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.Application.Contracts": {
+      "path": "src/Test_2.IdentityService.Application.Contracts/Test_2.IdentityService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.HttpApi.Host": {
+      "path": "src/Test_2.IdentityService.HttpApi.Host/Test_2.IdentityService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "Test_2.IdentityService.TestBase": {
+      "path": "test/Test_2.IdentityService.TestBase/Test_2.IdentityService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "Test_2.IdentityService.Domain.Tests": {
+      "path": "test/Test_2.IdentityService.Domain.Tests/Test_2.IdentityService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test_2.IdentityService.EntityFrameworkCore.Tests": {
+      "path": "test/Test_2.IdentityService.EntityFrameworkCore.Tests/Test_2.IdentityService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test_2.IdentityService.Application.Tests": {
+      "path": "test/Test_2.IdentityService.Application.Tests/Test_2.IdentityService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

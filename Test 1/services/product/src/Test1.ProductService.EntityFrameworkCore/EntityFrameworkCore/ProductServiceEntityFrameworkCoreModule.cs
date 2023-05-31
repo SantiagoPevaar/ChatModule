@@ -28,6 +28,7 @@ namespace Test1.ProductService.EntityFrameworkCore;
              * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
             options.AddRepository<Product, EfCoreProductRepository>();
+            options.ReplaceDbContext<IChatDbContext>();
         });
 
         Configure<AbpDbContextOptions>(options =>

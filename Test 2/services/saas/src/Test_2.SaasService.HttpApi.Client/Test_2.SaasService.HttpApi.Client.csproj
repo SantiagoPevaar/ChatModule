@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Test_2.SaasService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Saas.Host.HttpApi.Client" Version="7.2.2" />
+        <PackageReference Include="Volo.Saas.Tenant.HttpApi.Client" Version="7.2.2" />
+        <PackageReference Include="Volo.Payment.Admin.HttpApi.Client" Version="7.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Test_2.SaasService.Application.Contracts\Test_2.SaasService.Application.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>
