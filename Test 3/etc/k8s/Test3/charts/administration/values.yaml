@@ -1,0 +1,35 @@
+config:
+  selfUrl: # https://test3-st-administration
+  corsOrigins: # https://test3-st-gateway-web,https://test3-st-gateway-public-web
+  connectionStrings:
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://test3-st-authserver
+    requireHttpsMetadata: "false"
+    swaggerClientId: WebGateway_Swagger
+  remoteServices:
+    abpIdentityBaseUrl: #
+    useCurrentToken: "false"
+  dotnetEnv: #
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+synchedCommunication:
+  authority: # https://test3-st-authserver
+  requireHttps: #
+  validateIssuerName: #
+  validateEndpoints: #
+
+ingress:
+  host: # test3-st-administration
+  tlsSecret: test3-tls
+
+image:
+  repository: mycompanyname/test3-service-administration
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

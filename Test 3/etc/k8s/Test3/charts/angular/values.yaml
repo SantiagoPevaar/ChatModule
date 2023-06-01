@@ -1,0 +1,20 @@
+config:
+  selfUrl: # 
+  gatewayUrl: # 
+  authServer:
+      authority: # http://test3-st-authserver
+      requireHttpsMetadata: # false
+      responseType: "code"
+      strictDiscoveryDocumentValidation: false
+      skipIssuerCheck: true
+
+ingress:
+  host: # test3-st-angular
+  tlsSecret: test3-tls
+
+image:
+  repository: mycompanyname/test3-app-angular
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

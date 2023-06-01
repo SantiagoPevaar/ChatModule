@@ -1,0 +1,1 @@
+helm upgrade --install test3-st test3 --namespace test3 --create-namespace

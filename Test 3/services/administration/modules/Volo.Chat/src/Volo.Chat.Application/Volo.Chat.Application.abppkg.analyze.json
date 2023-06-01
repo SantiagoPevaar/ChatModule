@@ -1,0 +1,286 @@
+{
+  "name": "Volo.Chat.Application",
+  "hash": "82692297e53258e74210caf7e87300d5",
+  "contents": [
+    {
+      "namespace": "Volo.Chat",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "Volo.Chat.Domain",
+          "namespace": "Volo.Chat",
+          "name": "ChatDomainModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Chat.Application.Contracts",
+          "namespace": "Volo.Chat",
+          "name": "ChatApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.Ddd.Application",
+          "namespace": "Volo.Abp.Application",
+          "name": "AbpDddApplicationModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.AutoMapper",
+          "namespace": "Volo.Abp.AutoMapper",
+          "name": "AbpAutoMapperModule"
+        }
+      ],
+      "contentType": "abpModule",
+      "name": "ChatApplicationModule",
+      "summary": null
+    },
+    {
+      "namespace": "Volo.Chat.Users",
+      "baseClass": {
+        "name": "ChatAppService",
+        "namespace": "Volo.Chat",
+        "declaringAssemblyName": "Volo.Chat.Application"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "Volo.Abp.Application.Services",
+          "declaringAssemblyName": "Volo.Abp.Ddd.Application.Contracts"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "Volo.Abp",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "Volo.Abp.Aspects",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "Volo.Abp.Validation",
+          "declaringAssemblyName": "Volo.Abp.Validation"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "Volo.Abp.Uow",
+          "declaringAssemblyName": "Volo.Abp.Uow"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "Volo.Abp.Auditing",
+          "declaringAssemblyName": "Volo.Abp.Auditing.Contracts"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "Volo.Abp.GlobalFeatures",
+          "declaringAssemblyName": "Volo.Abp.GlobalFeatures"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "Volo.Abp.DependencyInjection",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IContactAppService",
+          "namespace": "Volo.Chat.Users",
+          "declaringAssemblyName": "Volo.Chat.Application.Contracts"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "List<ChatContactDto>",
+          "isAsync": true,
+          "name": "GetContactsAsync",
+          "summary": null,
+          "parameters": [
+            {
+              "type": "GetContactsInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Int32",
+          "isAsync": true,
+          "name": "GetTotalUnreadMessageCountAsync",
+          "summary": null,
+          "parameters": []
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "ContactAppService",
+      "summary": null
+    },
+    {
+      "namespace": "Volo.Chat.Settings",
+      "baseClass": {
+        "name": "ChatAppService",
+        "namespace": "Volo.Chat",
+        "declaringAssemblyName": "Volo.Chat.Application"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "Volo.Abp.Application.Services",
+          "declaringAssemblyName": "Volo.Abp.Ddd.Application.Contracts"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "Volo.Abp",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "Volo.Abp.Aspects",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "Volo.Abp.Validation",
+          "declaringAssemblyName": "Volo.Abp.Validation"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "Volo.Abp.Uow",
+          "declaringAssemblyName": "Volo.Abp.Uow"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "Volo.Abp.Auditing",
+          "declaringAssemblyName": "Volo.Abp.Auditing.Contracts"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "Volo.Abp.GlobalFeatures",
+          "declaringAssemblyName": "Volo.Abp.GlobalFeatures"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "Volo.Abp.DependencyInjection",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "ISettingsAppService",
+          "namespace": "Volo.Chat.Settings",
+          "declaringAssemblyName": "Volo.Chat.Application.Contracts"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Void",
+          "isAsync": true,
+          "name": "SetSendOnEnterSettingAsync",
+          "summary": null,
+          "parameters": [
+            {
+              "type": "SendOnEnterSettingDto",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "SettingsAppService",
+      "summary": null
+    },
+    {
+      "namespace": "Volo.Chat.Conversations",
+      "baseClass": {
+        "name": "ChatAppService",
+        "namespace": "Volo.Chat",
+        "declaringAssemblyName": "Volo.Chat.Application"
+      },
+      "implementingInterfaces": [
+        {
+          "name": "IApplicationService",
+          "namespace": "Volo.Abp.Application.Services",
+          "declaringAssemblyName": "Volo.Abp.Ddd.Application.Contracts"
+        },
+        {
+          "name": "IRemoteService",
+          "namespace": "Volo.Abp",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IAvoidDuplicateCrossCuttingConcerns",
+          "namespace": "Volo.Abp.Aspects",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IValidationEnabled",
+          "namespace": "Volo.Abp.Validation",
+          "declaringAssemblyName": "Volo.Abp.Validation"
+        },
+        {
+          "name": "IUnitOfWorkEnabled",
+          "namespace": "Volo.Abp.Uow",
+          "declaringAssemblyName": "Volo.Abp.Uow"
+        },
+        {
+          "name": "IAuditingEnabled",
+          "namespace": "Volo.Abp.Auditing",
+          "declaringAssemblyName": "Volo.Abp.Auditing.Contracts"
+        },
+        {
+          "name": "IGlobalFeatureCheckingEnabled",
+          "namespace": "Volo.Abp.GlobalFeatures",
+          "declaringAssemblyName": "Volo.Abp.GlobalFeatures"
+        },
+        {
+          "name": "ITransientDependency",
+          "namespace": "Volo.Abp.DependencyInjection",
+          "declaringAssemblyName": "Volo.Abp.Core"
+        },
+        {
+          "name": "IConversationAppService",
+          "namespace": "Volo.Chat.Conversations",
+          "declaringAssemblyName": "Volo.Chat.Application.Contracts"
+        }
+      ],
+      "methods": [
+        {
+          "returnType": "Void",
+          "isAsync": true,
+          "name": "SendMessageAsync",
+          "summary": null,
+          "parameters": [
+            {
+              "type": "SendMessageInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "ChatConversationDto",
+          "isAsync": true,
+          "name": "GetConversationAsync",
+          "summary": null,
+          "parameters": [
+            {
+              "type": "GetConversationInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        },
+        {
+          "returnType": "Void",
+          "isAsync": true,
+          "name": "MarkConversationAsReadAsync",
+          "summary": null,
+          "parameters": [
+            {
+              "type": "MarkConversationAsReadInput",
+              "name": "input",
+              "isOptional": false
+            }
+          ]
+        }
+      ],
+      "contentType": "applicationService",
+      "name": "ConversationAppService",
+      "summary": null
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Volo.Chat.Application.Contracts",
+  "hash": "3327cd7afb42021359d2c2b02f459cb4",
+  "contents": [
+    {
+      "namespace": "Volo.Chat",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "Volo.Chat.Domain.Shared",
+          "namespace": "Volo.Chat",
+          "name": "ChatDomainSharedModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.Ddd.Application.Contracts",
+          "namespace": "Volo.Abp.Application",
+          "name": "AbpDddApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.Authorization.Abstractions",
+          "namespace": "Volo.Abp.Authorization",
+          "name": "AbpAuthorizationAbstractionsModule"
+        }
+      ],
+      "contentType": "abpModule",
+      "name": "ChatApplicationContractsModule",
+      "summary": null
+    },
+    {
+      "displayName": "Messaging",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "Chat.Messaging",
+      "summary": null
+    },
+    {
+      "displayName": "Searching",
+      "isEnabled": true,
+      "contentType": "permission",
+      "name": "Chat.Searching",
+      "summary": null
+    }
+  ]
+}

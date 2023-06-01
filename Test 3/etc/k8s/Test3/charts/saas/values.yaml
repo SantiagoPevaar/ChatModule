@@ -1,0 +1,26 @@
+config:
+  selfUrl: https://test3-st-saas
+  corsOrigins: https://test3-st-gateway-web,https://test3-st-gateway-public-web
+  connectionStrings:
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://test3-st-authserver
+    requireHttpsMetadata: # "false"
+    swaggerClientId: WebGateway_Swagger
+  dotnetEnv: Staging
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+ingress:
+  host: test3-st-saas
+  tlsSecret: test3-tls
+
+image:
+  repository: mycompanyname/test3-service-saas
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}      
