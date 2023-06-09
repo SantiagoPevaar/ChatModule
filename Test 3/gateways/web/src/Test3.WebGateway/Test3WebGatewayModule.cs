@@ -12,11 +12,15 @@ using Test3.Shared.Hosting.Gateways;
 using Ocelot.Middleware;
 using Volo.Abp;
 using Volo.Abp.Modularity;
+using Volo.Chat;
 
 namespace Test3.WebGateway;
 
 [DependsOn(
     typeof(Test3SharedHostingGatewaysModule)
+)]
+[DependsOn(
+    typeof(ChatSignalRModule)
 )]
 public class Test3WebGatewayModule : AbpModule
 {

@@ -1,0 +1,127 @@
+{
+  "folders": {
+    "items": {
+      "services": {
+        "items": {
+          "administration": {
+            "items": {
+              "src": {}
+            }
+          },
+          "identity": {
+            "items": {
+              "src": {}
+            }
+          },
+          "product": {
+            "items": {
+              "src": {}
+            }
+          },
+          "saas": {
+            "items": {
+              "src": {}
+            }
+          }
+        }
+      },
+      "gateways": {
+        "items": {
+          "web": {
+            "items": {
+              "src": {}
+            }
+          },
+          "web-public": {
+            "items": {
+              "src": {}
+            }
+          }
+        }
+      },
+      "apps": {
+        "items": {
+          "auth-server": {
+            "items": {
+              "src": {}
+            }
+          },
+          "blazor": {
+            "items": {
+              "src": {}
+            }
+          },
+          "public-web": {
+            "items": {
+              "src": {}
+            }
+          },
+          "web": {
+            "items": {
+              "src": {}
+            }
+          }
+        }
+      },
+      "shared": {}
+    }
+  },
+  "packages": {
+    "Test4.AdministrationService.HttpApi.Host": {
+      "path": "services/administration/src/Test4.AdministrationService.HttpApi.Host/Test4.AdministrationService.HttpApi.Host.abppkg.json",
+      "folder": "services/administration/src"
+    },
+    "Test4.IdentityService.HttpApi.Host": {
+      "path": "services/identity/src/Test4.IdentityService.HttpApi.Host/Test4.IdentityService.HttpApi.Host.abppkg.json",
+      "folder": "services/identity/src"
+    },
+    "Test4.ProductService.HttpApi.Host": {
+      "path": "services/product/src/Test4.ProductService.HttpApi.Host/Test4.ProductService.HttpApi.Host.abppkg.json",
+      "folder": "services/product/src"
+    },
+    "Test4.SaasService.HttpApi.Host": {
+      "path": "services/saas/src/Test4.SaasService.HttpApi.Host/Test4.SaasService.HttpApi.Host.abppkg.json",
+      "folder": "services/saas/src"
+    },
+    "Test4.WebGateway": {
+      "path": "gateways/web/src/Test4.WebGateway/Test4.WebGateway.abppkg.json",
+      "folder": "gateways/web/src"
+    },
+    "Test4.PublicWebGateway": {
+      "path": "gateways/web-public/src/Test4.PublicWebGateway/Test4.PublicWebGateway.abppkg.json",
+      "folder": "gateways/web-public/src"
+    },
+    "Test4.AuthServer": {
+      "path": "apps/auth-server/src/Test4.AuthServer/Test4.AuthServer.abppkg.json",
+      "folder": "apps/auth-server/src"
+    },
+    "Test4.PublicWeb": {
+      "path": "apps/public-web/src/Test4.PublicWeb/Test4.PublicWeb.abppkg.json",
+      "folder": "apps/public-web/src"
+    },
+    "Test4.DbMigrator": {
+      "path": "shared/Test4.DbMigrator/Test4.DbMigrator.abppkg.json",
+      "folder": "shared"
+    },
+    "Test4.Shared.Hosting.AspNetCore": {
+      "path": "shared/Test4.Shared.Hosting.AspNetCore/Test4.Shared.Hosting.AspNetCore.abppkg.json",
+      "folder": "shared"
+    },
+    "Test4.Shared.Hosting.Microservices": {
+      "path": "shared/Test4.Shared.Hosting.Microservices/Test4.Shared.Hosting.Microservices.abppkg.json",
+      "folder": "shared"
+    },
+    "Test4.Shared.Localization": {
+      "path": "shared/Test4.Shared.Localization/Test4.Shared.Localization.abppkg.json",
+      "folder": "shared"
+    },
+    "Test4.Shared.Hosting.Gateways": {
+      "path": "shared/Test4.Shared.Hosting.Gateways/Test4.Shared.Hosting.Gateways.abppkg.json",
+      "folder": "shared"
+    },
+    "Test4.Shared.Hosting": {
+      "path": "shared/Test4.Shared.Hosting/Test4.Shared.Hosting.abppkg.json",
+      "folder": "shared"
+    }
+  }
+}

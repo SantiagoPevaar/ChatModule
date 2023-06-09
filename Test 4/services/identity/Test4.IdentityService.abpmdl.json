@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Test4.IdentityService.HttpApi": {
+      "path": "src/Test4.IdentityService.HttpApi/Test4.IdentityService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.Application": {
+      "path": "src/Test4.IdentityService.Application/Test4.IdentityService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.Domain": {
+      "path": "src/Test4.IdentityService.Domain/Test4.IdentityService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.Domain.Shared": {
+      "path": "src/Test4.IdentityService.Domain.Shared/Test4.IdentityService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.EntityFrameworkCore": {
+      "path": "src/Test4.IdentityService.EntityFrameworkCore/Test4.IdentityService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.HttpApi.Client": {
+      "path": "src/Test4.IdentityService.HttpApi.Client/Test4.IdentityService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.Application.Contracts": {
+      "path": "src/Test4.IdentityService.Application.Contracts/Test4.IdentityService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.HttpApi.Host": {
+      "path": "src/Test4.IdentityService.HttpApi.Host/Test4.IdentityService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.IdentityService.TestBase": {
+      "path": "test/Test4.IdentityService.TestBase/Test4.IdentityService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "Test4.IdentityService.Domain.Tests": {
+      "path": "test/Test4.IdentityService.Domain.Tests/Test4.IdentityService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test4.IdentityService.EntityFrameworkCore.Tests": {
+      "path": "test/Test4.IdentityService.EntityFrameworkCore.Tests/Test4.IdentityService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test4.IdentityService.Application.Tests": {
+      "path": "test/Test4.IdentityService.Application.Tests/Test4.IdentityService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

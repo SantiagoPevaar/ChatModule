@@ -1,0 +1,1 @@
+helm upgrade --install test4-st test4 --namespace test4 --create-namespace

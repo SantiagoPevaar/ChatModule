@@ -1,0 +1,8 @@
+config:
+  elasticsearchUrl: http://test4-st-elasticsearch:9200
+
+ingress:
+  host: test4-st-kibana
+  tlsSecret: test4-tls
+
+

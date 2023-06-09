@@ -123,6 +123,20 @@ public class AdministrationServiceHttpApiHostModule : AbpModule
         {
             endpoints.MapMetrics();
         });
+        app.Use(async (httpContext, next) =>
+        {
+            var accessToken = httpContext.Request.Query["access_token"];
+
+            var path = httpContext.Request.Path;
+            if (!string.IsNullOrEmpty(accessToken) &&
+                (path.StartsWithSegments("/signalr-hubs/chat")))
+            {
+                httpContext.Request.Headers["Authorization"] = "Bearer " + accessToken;
+            }
+
+            await next();
+        });
+
     }
 
     public async override Task OnPostApplicationInitializationAsync(ApplicationInitializationContext context)

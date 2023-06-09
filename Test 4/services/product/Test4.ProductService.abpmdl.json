@@ -1,0 +1,62 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Test4.ProductService.Domain.Shared": {
+      "path": "src/Test4.ProductService.Domain.Shared/Test4.ProductService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.Domain": {
+      "path": "src/Test4.ProductService.Domain/Test4.ProductService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.Application.Contracts": {
+      "path": "src/Test4.ProductService.Application.Contracts/Test4.ProductService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.Application": {
+      "path": "src/Test4.ProductService.Application/Test4.ProductService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.EntityFrameworkCore": {
+      "path": "src/Test4.ProductService.EntityFrameworkCore/Test4.ProductService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.HttpApi": {
+      "path": "src/Test4.ProductService.HttpApi/Test4.ProductService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.HttpApi.Client": {
+      "path": "src/Test4.ProductService.HttpApi.Client/Test4.ProductService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.HttpApi.Host": {
+      "path": "src/Test4.ProductService.HttpApi.Host/Test4.ProductService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.Web": {
+      "path": "src/Test4.ProductService.Web/Test4.ProductService.Web.abppkg.json",
+      "folder": "src"
+    },
+    "Test4.ProductService.Application.Tests": {
+      "path": "test/Test4.ProductService.Application.Tests/Test4.ProductService.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test4.ProductService.Domain.Tests": {
+      "path": "test/Test4.ProductService.Domain.Tests/Test4.ProductService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test4.ProductService.EntityFrameworkCore.Tests": {
+      "path": "test/Test4.ProductService.EntityFrameworkCore.Tests/Test4.ProductService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test4.ProductService.TestBase": {
+      "path": "test/Test4.ProductService.TestBase/Test4.ProductService.TestBase.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

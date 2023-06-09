@@ -1,0 +1,27 @@
+config:
+  selfUrl: # https://test4-st-product
+  corsOrigins: #
+  connectionStrings:
+    productService: #
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://test4-st-authserver
+    requireHttpsMetadata: # "false"
+    swaggerClientId: WebGateway_Swagger
+  dotnetEnv: Staging
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+ingress:
+  host: test4-st-product
+  tlsSecret: test4-tls
+
+image:
+  repository: mycompanyname/test4-service-product
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}      

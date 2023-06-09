@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "Test4.PublicWebGateway": {
+      "path": "src/Test4.PublicWebGateway/Test4.PublicWebGateway.abppkg.json",
+      "folder": "src"
+    }
+  }
+}
