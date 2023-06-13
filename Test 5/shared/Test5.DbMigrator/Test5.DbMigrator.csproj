@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Test5.Shared.Hosting\Test5.Shared.Hosting.csproj" />
+        <ProjectReference Include="..\..\services\administration\src\Test5.AdministrationService.Application.Contracts\Test5.AdministrationService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\services\administration\src\Test5.AdministrationService.EntityFrameworkCore\Test5.AdministrationService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\services\identity\src\Test5.IdentityService.EntityFrameworkCore\Test5.IdentityService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\services\identity\src\Test5.IdentityService.Application.Contracts\Test5.IdentityService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\services\saas\src\Test5.SaasService.EntityFrameworkCore\Test5.SaasService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\services\saas\src\Test5.SaasService.Application.Contracts\Test5.SaasService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\services\product\src\Test5.ProductService.Application.Contracts\Test5.ProductService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\services\product\src\Test5.ProductService.EntityFrameworkCore\Test5.ProductService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\services\chat\src\Test5.ChatService.Application.Contracts\Test5.ChatService.Application.Contracts.csproj"/>
+        <ProjectReference Include="..\..\services\chat\src\Test5.ChatService.EntityFrameworkCore\Test5.ChatService.EntityFrameworkCore.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="appsettings.json" />
+        <Content Include="appsettings.json">
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <None Remove="appsettings.secrets.json" />
+    <Content Include="appsettings.secrets.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    </ItemGroup>
+
+</Project>

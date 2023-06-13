@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Test5.SaasService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Saas.Domain" Version="7.2.2" />
+        <PackageReference Include="Volo.Payment.Domain" Version="7.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Test5.SaasService.Domain.Shared\Test5.SaasService.Domain.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

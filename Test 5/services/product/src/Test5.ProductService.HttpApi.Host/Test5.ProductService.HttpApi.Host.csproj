@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Test5.ProductService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>        
+        <ProjectReference Include="..\..\..\..\shared\Test5.Shared.Hosting.Microservices\Test5.Shared.Hosting.Microservices.csproj" />
+        <ProjectReference Include="..\Test5.ProductService.Application\Test5.ProductService.Application.csproj" />
+        <ProjectReference Include="..\Test5.ProductService.EntityFrameworkCore\Test5.ProductService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\Test5.ProductService.HttpApi\Test5.ProductService.HttpApi.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+</Project>

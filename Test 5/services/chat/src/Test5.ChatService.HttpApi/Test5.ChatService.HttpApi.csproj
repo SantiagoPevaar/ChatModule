@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Test5.ChatService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="7.2.2" />
+    <ProjectReference Include="..\..\modules\Volo.Chat\src\Volo.Chat.HttpApi\Volo.Chat.HttpApi.csproj" />
+    <ProjectReference Include="..\Test5.ChatService.Application.Contracts\Test5.ChatService.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

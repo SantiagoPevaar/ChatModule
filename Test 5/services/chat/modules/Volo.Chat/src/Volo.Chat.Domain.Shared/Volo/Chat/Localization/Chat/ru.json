@@ -1,0 +1,33 @@
+{
+  "culture": "ru",
+  "texts": {
+    "Volo.Chat:010001": "Сообщение не должно быть пустым!",
+    "Volo.Chat:010002": "Пользователь получателя не найден!",
+    "Volo.Chat:010003": "Другой пользователь не найден!",
+    "Permission:Chat": "Чат",
+    "Permission:Messaging": "Обмен сообщениями",
+    "Feature:ChatGroup": "Чат",
+    "Feature:ChatEnable": "Включить чат",
+    "Feature:ChatEnableDescription": "Включите систему обмена сообщениями в приложении.",
+    "SearchInContacts": "Искать в контактах...",
+    "SendOnEnter": "Отправить при входе",
+    "Send": "Отправлять",
+    "OtherContacts": "ДРУГИЕ КОНТАКТЫ",
+    "TypeMessage": "Введите сообщение",
+    "YouHave{0}UnreadMessages": "У вас {0} непрочитанных сообщений",
+    "YouHaveAnUnreadMessage": "У вас есть непрочитанное сообщение",
+    "NewChatMessage": "Новое сообщение в чате",
+    "Jan": "Ян",
+    "Feb": "февраль",
+    "Mar": "март",
+    "Apr": "апр",
+    "May": "май",
+    "Jun": "июнь",
+    "Jul": "июль",
+    "Aug": "авг",
+    "Sept": "Сентябрь",
+    "Oct": "октябрь",
+    "Nov": "ноябрь",
+    "Dec": "декабрь"
+  }
+}

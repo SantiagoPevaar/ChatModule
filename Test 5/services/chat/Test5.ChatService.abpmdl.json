@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Test5.ChatService.Domain.Shared": {
+      "path": "src/Test5.ChatService.Domain.Shared/Test5.ChatService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.Application.Contracts": {
+      "path": "src/Test5.ChatService.Application.Contracts/Test5.ChatService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.Domain": {
+      "path": "src/Test5.ChatService.Domain/Test5.ChatService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.Application": {
+      "path": "src/Test5.ChatService.Application/Test5.ChatService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.EntityFrameworkCore": {
+      "path": "src/Test5.ChatService.EntityFrameworkCore/Test5.ChatService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.HttpApi": {
+      "path": "src/Test5.ChatService.HttpApi/Test5.ChatService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.HttpApi.Client": {
+      "path": "src/Test5.ChatService.HttpApi.Client/Test5.ChatService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.HttpApi.Host": {
+      "path": "src/Test5.ChatService.HttpApi.Host/Test5.ChatService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "Test5.ChatService.Domain.Tests": {
+      "path": "test/Test5.ChatService.Domain.Tests/Test5.ChatService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test5.ChatService.EntityFrameworkCore.Tests": {
+      "path": "test/Test5.ChatService.EntityFrameworkCore.Tests/Test5.ChatService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Test5.ChatService.TestBase": {
+      "path": "test/Test5.ChatService.TestBase/Test5.ChatService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "Test5.ChatService.Application.Tests": {
+      "path": "test/Test5.ChatService.Application.Tests/Test5.ChatService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

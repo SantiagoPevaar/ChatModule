@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Test5.AdministrationService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="7.2.2" />
+        <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="7.2.2" />
+        <PackageReference Include="Volo.Abp.Identity.Pro.HttpApi.Client" Version="7.2.2" />
+        <PackageReference Include="Volo.Abp.Account.Pro.Admin.Application.Contracts" Version="7.2.2" />
+        <PackageReference Include="Volo.Abp.Account.Pro.Public.Application.Contracts" Version="7.2.2" />
+        <PackageReference Include="Volo.Abp.OpenIddict.Pro.Domain.Shared" Version="7.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\shared\Test5.Shared.Localization\Test5.Shared.Localization.csproj" />
+        <ProjectReference Include="..\..\..\..\shared\Test5.Shared.Hosting.Microservices\Test5.Shared.Hosting.Microservices.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Test5.AdministrationService.Application\Test5.AdministrationService.Application.csproj" />
+        <ProjectReference Include="..\Test5.AdministrationService.EntityFrameworkCore\Test5.AdministrationService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\Test5.AdministrationService.HttpApi\Test5.AdministrationService.HttpApi.csproj" />
+      <ProjectReference Include="..\..\..\chat\src\Test5.ChatService.Application.Contracts\Test5.ChatService.Application.Contracts.csproj" />
+
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+</Project>

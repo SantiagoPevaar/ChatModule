@@ -1,0 +1,29 @@
+{
+  "name": "Volo.Chat.SignalR",
+  "hash": "6070f3410b4484957f582894722c7d26",
+  "contents": [
+    {
+      "namespace": "Volo.Chat",
+      "dependsOnModules": [
+        {
+          "declaringAssemblyName": "Volo.Chat.Application.Contracts",
+          "namespace": "Volo.Chat",
+          "name": "ChatApplicationContractsModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.AspNetCore.SignalR",
+          "namespace": "Volo.Abp.AspNetCore.SignalR",
+          "name": "AbpAspNetCoreSignalRModule"
+        },
+        {
+          "declaringAssemblyName": "Volo.Abp.EventBus",
+          "namespace": "Volo.Abp.EventBus",
+          "name": "AbpEventBusModule"
+        }
+      ],
+      "contentType": "abpModule",
+      "name": "ChatSignalRModule",
+      "summary": null
+    }
+  ]
+}

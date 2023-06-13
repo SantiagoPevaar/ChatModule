@@ -1,0 +1,32 @@
+config:
+  selfUrl: #
+  corsOrigins: #
+  allowedRedirectUrls: #
+  disablePii: #
+  identityService:
+    connString: # 
+  administrationService:
+    connString: # 
+  saasService:
+    connString: #     
+  authServer:
+    authority: #
+    requireHttpsMetadata: #
+    swaggerClientId: #
+  dotnetEnv: # 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+ingress:
+  host: # test5-st-authserver
+  tlsSecret: test5-tls
+
+image:
+  repository: mycompanyname/test5-app-authserver
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}
+    

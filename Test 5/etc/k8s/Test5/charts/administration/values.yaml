@@ -1,0 +1,35 @@
+config:
+  selfUrl: # https://test5-st-administration
+  corsOrigins: # https://test5-st-gateway-web,https://test5-st-gateway-public-web
+  connectionStrings:
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://test5-st-authserver
+    requireHttpsMetadata: "false"
+    swaggerClientId: WebGateway_Swagger
+  remoteServices:
+    abpIdentityBaseUrl: #
+    useCurrentToken: "false"
+  dotnetEnv: #
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+synchedCommunication:
+  authority: # https://test5-st-authserver
+  requireHttps: #
+  validateIssuerName: #
+  validateEndpoints: #
+
+ingress:
+  host: # test5-st-administration
+  tlsSecret: test5-tls
+
+image:
+  repository: mycompanyname/test5-service-administration
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}
